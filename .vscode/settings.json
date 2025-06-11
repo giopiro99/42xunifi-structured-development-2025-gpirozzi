@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "password_validator.h": "c",
+        "grade_map.h": "c"
+    }
+}
