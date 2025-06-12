@@ -6,11 +6,35 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 18:48:51 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/12 10:49:46 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/12 16:09:15 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "grade_map.h"
+
+// Plusminus
+const char *A  = "A+";
+const char *A1 = "A";
+const char *A2 = "A-";
+const char *B  = "B+";
+const char *B1 = "B";
+const char *B2 = "B-";
+const char *C  = "C+";
+const char *C1 = "C";
+const char *C2 = "C-";
+const char *D  = "D+";
+const char *D1 = "D";
+const char *D2 = "D-";
+const char *F  = "F";
+
+// Standard
+const char *A3 = "A";
+const char *B3 = "B";
+const char *C3 = "C";
+const char *D3 = "D";
+
+// Pass/Fail
+const char *P = "P";
 
 void	ft_plusminus_mapper(const int scores, const char **mapped_grades)
 {
@@ -85,6 +109,8 @@ void map_scores(const int *scores, int size, GradeMapper mapper, const char **ma
 	}
 }
 
+/* #include <stdio.h>
+
 int main(void)
 {
 	int scores[] = {100, 95, 89, 76, 62, 50};
@@ -107,4 +133,4 @@ int main(void)
 		printf("Score: %d => Grade: %s\n", scores[i], mapped[i]);
 
 	return 0;
-}
+} */

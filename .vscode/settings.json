@@ -3,6 +3,13 @@
         "stdlib.h": "c",
         "stdio.h": "c",
         "password_validator.h": "c",
-        "grade_map.h": "c"
+        "grade_map.h": "c",
+        "cstddef": "cpp",
+        "cmath": "cpp",
+        "limits": "cpp",
+        "type_traits": "cpp",
+        "food_order.h": "c",
+        "stdbool.h": "c",
+        "workout_scheduler.h": "c"
     }
 }
