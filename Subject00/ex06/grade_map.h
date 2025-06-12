@@ -6,26 +6,34 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:57:14 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/11 19:07:55 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:46:16 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GRADE_MAP_H
 # define GRADE_MAP_H
 
-#define A "A+"
-#define A1 "A"
-#define A2 "A-"
-#define B "B+"
-#define B1 "B"
-#define B2 "B-"
-#define C "C+"
-#define C1 "C"
-#define C2 "C-"
-#define D "D+"
-#define D1 "D"
-#define D2 "D-"
-#define F "F"
+//PLUSMINUS MAPPER
+extern const char *A;
+extern const char *A1;
+extern const char *A2;
+extern const char *B;
+extern const char *B1;
+extern const char *B2;
+extern const char *C;
+extern const char *C1;
+extern const char *C2;
+extern const char *D;
+extern const char *D1;
+extern const char *D2;
+extern const char *F;
+//STANDARD MAPPER
+extern const char *A3;
+extern const char *B3;
+extern const char *C3;
+extern const char *D3;
+//PASSFAIL MAPPER
+extern const char *P;
 
 typedef	enum	s_GradeMapper
 {
@@ -33,6 +41,10 @@ typedef	enum	s_GradeMapper
 	PASSFAIL,
 	STANDARD,
 }	GradeMapper;
+
 void map_scores(const int *scores, int size, GradeMapper mapper, const char **mapped_grades);
+void	ft_standard_mapper(const int scores, const char **mapped_grades);
+void	ft_passfail_mapper(const int scores, const char **mapped_grades);
+void	ft_plusminus_mapper(const int scores, const char **mapped_grades);
 
 #endif
