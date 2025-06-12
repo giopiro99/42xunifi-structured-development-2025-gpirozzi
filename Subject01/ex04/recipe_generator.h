@@ -6,27 +6,39 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 19:01:46 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/12 19:05:23 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/12 19:25:13 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RECIPE_GENERATOR_H
 # define RECIPE_GENERATOR_H
 
+#include <unistd.h>
+#include <stdlib.h>
+
 typedef struct	s_Ingredients
 {
-
+	char	**items;
+	int		count_items;
 }	Ingredients;
 
 typedef struct	s_Recipe
 {
-
+	char	*name;
+	char	*how_to_prepare;
+	char	**used_items;
+	float	cooking_time;
+	int		match_score;
 }	Recipe;
 
 typedef struct	s_TasteProfile
 {
-
+	char	**liked_items;
+	char	**disliked_items;
+	char	*diet_tipe;
+	int		preference_score;
 }	TasteProfile;
+
 // Fetch current ingredients from fridge. Returns a new Ingredients* or NULL on failure.
 Ingredients *get_current_ingredients(void);
 // Fetch user taste profile. Returns a new TasteProfile* or NULL on failure.
