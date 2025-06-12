@@ -6,7 +6,7 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 18:30:06 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/12 18:53:21 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/12 19:12:06 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define WORKOUT_SCHEDULER_H
 
 # include <unistd.h>
+# include <stdbool.h>
 
 typedef struct s_exercise
 {
@@ -37,6 +38,7 @@ typedef struct s_UserData
 	float		height;
 	float		bmi;
 	int			fitness_level;
+	bool		preference;
 	WorkoutPlan	*my_plan;
 }	UserData;
 

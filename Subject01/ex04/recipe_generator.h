@@ -6,7 +6,7 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 19:01:46 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/12 19:04:42 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/12 19:05:23 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ typedef struct	s_Recipe
 {
 
 }	Recipe;
-
 
 typedef struct	s_TasteProfile
 {

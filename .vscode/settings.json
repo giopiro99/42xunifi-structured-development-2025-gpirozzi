@@ -10,6 +10,7 @@
         "type_traits": "cpp",
         "food_order.h": "c",
         "stdbool.h": "c",
-        "workout_scheduler.h": "c"
+        "workout_scheduler.h": "c",
+        "unistd.h": "c"
     }
 }

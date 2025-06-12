@@ -6,7 +6,7 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:56:09 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/12 19:00:19 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/12 19:15:28 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,8 @@ WorkoutPlan *create_workout_schedule(char *username)
 	if (!user)
 		return (NULL);
 	my_workout = build_base_plan(user);
-	if (!my_workout)
-	{
-		free_user_data(user);
-		return (NULL);
-	}
-	my_workout = refine_plan(my_workout, user);
+	if (my_workout && user->preference)
+			my_workout = refine_plan(my_workout, user);
 	if (!my_workout)
 	{
 		free_user_data(user);
