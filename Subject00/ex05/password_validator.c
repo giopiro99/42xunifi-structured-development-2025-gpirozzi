@@ -6,7 +6,7 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:14:54 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/11 17:56:05 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/13 11:23:23 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ int	ft_strlen(const char *str)
 bool	check_upper_char(const char *str)
 {
 	int	i;
-	
+
+	i = 0;
 	if (!str)
 		return (false);
 	while (str[i])
@@ -42,7 +43,8 @@ bool	check_upper_char(const char *str)
 bool	check_lower_char(const char *str)
 {
 	int	i;
-	
+
+	i = 0;
 	if (!str)
 		return (false);
 	while (str[i])
@@ -57,7 +59,8 @@ bool	check_lower_char(const char *str)
 bool	check_digit_char(const char *str)
 {
 	int	i;
-	
+
+	i = 0;
 	if (!str)
 		return (false);
 	while (str[i])
@@ -72,7 +75,8 @@ bool	check_digit_char(const char *str)
 bool	is_special(const char *str)
 {
 	int	i;
-	
+
+	i = 0;
 	if (!str)
 		return (false);
 	while (str[i])
