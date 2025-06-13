@@ -6,7 +6,7 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:18:58 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/12 17:49:17 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/13 14:58:00 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ void				update_music_library(MusicLibrary *library, MusicFile *song);
 
 MusicLibrary *organize_music_library(const char *directory_path);
 void	ft_free_library(MusicLibrary *library);
-void	ft_free_matrix(const char **matrix);
+void	ft_free_matrix(char **matrix);
 
 #endif

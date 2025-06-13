@@ -6,13 +6,13 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:18:37 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/13 14:53:37 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/13 14:58:06 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "music_organizer.h"
 
-void	free_all(MusicLibrary *library, const char **matrix)
+void	free_all(MusicLibrary *library, char **matrix)
 {
 	ft_free_matrix(matrix);
 	ft_free_library(library);
@@ -33,27 +33,27 @@ void	ft_free_library(MusicLibrary *library)
 	free(library);
 }
 
-void	ft_free_matrix(const char **matrix)
+void	ft_free_matrix(char **matrix)
 {
 	int	i;
 
 	i = 0;
 	while (matrix[i])
 	{
-		free((char *)matrix[i]);
+		free(matrix[i]);
 		i++;
 	}
 }
 
 MusicLibrary	*organize_music_library(const char *directory_path)
 {
-	const char		**songs_files;
+	char		**songs_files;
 	MusicLibrary	*library;
 	int				i;
 
 	i = 0;
 	library = NULL;
-	songs_files = scan_directory(directory_path);
+	songs_files = (char **)scan_directory(directory_path);
 	if (!songs_files)
 		return (NULL);
 	library = create_music_library();
