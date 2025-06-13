@@ -6,7 +6,7 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 19:01:46 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/12 19:25:13 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/13 09:49:33 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,6 @@ int get_user_approval(Recipe *recipe);
 void free_ingredients(Ingredients *ing);
 void free_taste_profile(TasteProfile *tp);
 void free_recipe(Recipe *recipe);
-
+void free_all_resources(Ingredients *fridge, TasteProfile *user_preference, Recipe *recipe);
 Recipe *create_custom_recipe(void);
 #endif
