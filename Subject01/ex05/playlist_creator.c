@@ -6,7 +6,7 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 09:54:04 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/13 10:59:28 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/13 11:00:42 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	free_all_resources(MoodSettings *mood, FilterSettings *settings, SongData *
 	if (playlist)
 		free_playlist(playlist);
 }
+
 Playlist	*get_playlist_with_variations(MoodSettings *mood, FilterSettings *settings)
 {
 	FilterSettings	*changed_settings;
@@ -72,6 +73,7 @@ Playlist	*get_playlist_with_no_variations(MoodSettings *mood, FilterSettings *se
 	free_all_resources(mood, settings, NULL, NULL);
 	return (playlist);
 }
+
 Playlist	*create_playlist(void)
 {
 	MoodSettings	*mood;
