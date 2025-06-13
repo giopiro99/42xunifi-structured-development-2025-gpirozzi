@@ -6,7 +6,7 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:18:37 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/13 14:49:01 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/13 14:52:30 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_free_matrix(const char **matrix)
 	i = 0;
 	while (matrix[i])
 	{
-		free((char *)matrix[i]);
+		free(&matrix[i]);
 		i++;
 	}
 }
