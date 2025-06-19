@@ -6,7 +6,7 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:18:37 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/13 14:58:06 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/13 15:00:08 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ MusicLibrary	*organize_music_library(const char *directory_path)
 
 	i = 0;
 	library = NULL;
-	songs_files = (char **)scan_directory(directory_path);
+	songs_files = scan_directory(directory_path);
 	if (!songs_files)
 		return (NULL);
 	library = create_music_library();
