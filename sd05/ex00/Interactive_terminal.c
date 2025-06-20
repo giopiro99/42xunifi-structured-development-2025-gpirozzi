@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Interactive_terminal.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzuccaro <fzuccaro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/19 18:21:32 by fzuccaro          #+#    #+#             */
-/*   Updated: 2025/06/19 20:31:41 by fzuccaro         ###   ########.fr       */
+/*   Created: 2025/06/19 18:21:32 by gpirozzi          #+#    #+#             */
+/*   Updated: 2025/06/20 10:57:46 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int ft_strcasecmp(char *str1, char *str2)
     while (tmp1[i])
     {
         if (ft_isalpha(tmp1[i]))
-        tmp1[i] = ft_tolower(tmp1[i]);
+            tmp1[i] = ft_tolower(tmp1[i]);
         i++;
     }
     i = 0;

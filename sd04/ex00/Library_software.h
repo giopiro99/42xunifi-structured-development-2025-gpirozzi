@@ -3,30 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   Library_software.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzuccaro <fzuccaro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/18 14:35:09 by fzuccaro          #+#    #+#             */
-/*   Updated: 2025/06/18 18:16:40 by fzuccaro         ###   ########.fr       */
+/*   Created: 2025/06/18 14:35:09 by gpirozzi          #+#    #+#             */
+/*   Updated: 2025/06/20 10:59:05 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBRARY_SOFTWARE_H
-#define LIBRARY_SOFTWARE_H
+# define LIBRARY_SOFTWARE_H
 
 # include <stddef.h>
-# include "libft.h"
+# include <stdbool.h>
 
-typedef struct	t_book
+typedef struct	s_book
 {
-	int		book_id;
-	char	*title;
-	char	*author;
-}				s_book;
+	char			*book_id;
+	char			*title;
+	char			*author;
+	struct	s_book	*next_book;
+}				t_book;
 
-int		load_and_fill_catalogue(const char *filename, t_book *books, int max_books);
-t_book  create_book(int id, const char *title, const char *author);
-void    search_books_by_title(t_book books[], int count, const char *substr);
-void    search_books_by_author(t_book books[], int count, const char *substr);
+bool    ft_check_file(char *filename);
+char    **ft_get_books_value(const char *line);
+void	append_node (t_book *book);
+t_book	*find_last_node(t_book *book);
+void    ft_handle_terminal_input(t_book *books);
+void    ft_free_all(t_book *books);
+void    data_init(t_book *books);
+
+int		load_and_fill_catalogue(int fd, t_book *books);
+void    search_books_by_title(t_book *books);
+void    search_books_by_author(t_book *books);
 int		ft_strncasecmp(char *str1, char *str2, size_t n);
 int     str_case_insensitive_match(const char *search, const char *in_catalogue);
 

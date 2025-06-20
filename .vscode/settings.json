@@ -11,6 +11,9 @@
         "food_order.h": "c",
         "stdbool.h": "c",
         "workout_scheduler.h": "c",
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "library_software.h": "c",
+        "libft.h": "c",
+        "stddef.h": "c"
     }
 }

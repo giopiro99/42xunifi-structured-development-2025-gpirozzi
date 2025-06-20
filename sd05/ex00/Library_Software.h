@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Library_Software.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fzuccaro <fzuccaro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 15:43:34 by fzuccaro          #+#    #+#             */
-/*   Updated: 2025/06/19 19:15:01 by fzuccaro         ###   ########.fr       */
+/*   Updated: 2025/06/20 10:57:14 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stddef.h>
 # include <stdbool.h>
-# include "./libft.h"
+# include "./libft/libft.h"
 
 typedef struct	s_book
 {
