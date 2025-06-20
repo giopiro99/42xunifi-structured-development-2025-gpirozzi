@@ -6,7 +6,7 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 16:00:07 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/20 10:56:22 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/20 11:07:54 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ int		load_and_fill_catalogue(int fd, t_book *books)
 		count_line++;
 		free(line);
 		line = get_next_line(fd);
+		ft_free_matrix(splitted_line);
     }
 	return 1;
 }
