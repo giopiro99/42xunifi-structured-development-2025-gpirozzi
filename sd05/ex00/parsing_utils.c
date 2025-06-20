@@ -6,7 +6,7 @@
 /*   By: gpirozzi <gpirozzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 16:50:09 by gpirozzi          #+#    #+#             */
-/*   Updated: 2025/06/20 10:56:30 by gpirozzi         ###   ########.fr       */
+/*   Updated: 2025/06/20 11:12:03 by gpirozzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,13 @@ bool    ft_check_title(char *title)
         return false;
     while (title[i] && title[i] != '\n')
     {
-        if (title[0] == ' ')
+        if (title[0] == ' ' || title[0] == '\t')
             return false;
-        if (title[i] == ' ' && title[i + 1] == ' ')
+        if ((title[i] == ' ' || title[i] == '\t') && (title[i + 1] == ' ' || title[i + 1] == '\t'))
             return false;
         i++;
     }
-    if (title[i - 1] == ' ')
+    if (title[i - 1] == ' ' && title[i - 1] == '\t')
         return false;
     return true;
 }
@@ -73,9 +73,9 @@ bool    ft_check_author(char *author)
     {
         if (!ft_isalpha(author[0]))
             return false;
-        if (!ft_isalpha(author[i]) && author[i] != '.' && author[i] != ' ')
+        if (!ft_isalpha(author[i]) && author[i] != '.' && author[i] != ' ' && author[i] != '\t')
             return false;
-        if (author[i] == ' ' && author[i + 1] == ' ')
+        if (author[i] == ' ' && (author[i + 1] == ' ' || author[i + 1] == '\t'))
             return false;
         i++;
     }
